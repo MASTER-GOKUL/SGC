@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>sgc(coordinator selection)</title>
+<style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"">
+}
+h1{ font-size: +50;
+}
+
+.f1{font-size:+20;font-weight:bold;color:red;}          
+.register1{
+                margin-top: 10%;
+                padding: 3%;
+                border-radius: 2.5rem;
+            }
+.bg1{
+  		background: -webkit-linear-gradient(left,	#FFFFFF,#cfecec,#FFFFFF);
+}
+.btnSubmit
+            {
+                width: 50%;
+                border-radius: 1rem;
+                padding: 1.5%;
+                color: #fff;
+                background-color: #03612e;
+                border: none;
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+            }
+</style>
+</head>
+<body>
+
+<style>
+.img1 {
+  border-radius: 50%;
+}
+.img2 {
+  border-radius: 5%;
+}
+</style>
+<p>
+<div class="container register1 bg1">
+<div style="float:left"><img class="img1" id="img" src="sgc.png" width=100/>
+</div>
+<div><center><div><h1>sgc (coordinator selection)</h1></div></center></div>
+<br> <br>
+<center>
+<hr>
+<br>
+<div id="demo">
+<p class="f1">GUYS READ <br> COME ON SELECT</P>
+</div>
+<div id="demo1">
+</div>
+<input type="submit" onclick="my()" class="btnSubmit btn-block" />
+</center>
+</div>
+<script>
+var d=["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"];
+function my(){
+var f=0;
+while(f==0){
+var retvalue = Math.floor((Math.random() * 3) + 1);
+var repImage;
+var text;
+if (retvalue == 1){  d[0]+=1; f=1;}
+if (retvalue == 2){  d[1]+=1; f=2;}
+if (retvalue == 3){  d[2]+=1; f=3;}
+if (retvalue == 4){  d[3]+=1; f=4;}
+if (retvalue == 5){  d[4]+=1; f=5;}
+ if(f==1 && d[0]<2){              
+  repImage = "<img  class='img2' src='1.png'width=300 height=300>";demo.innerHTML = repImage;
+   text="<h3><center>1<br>GIRL IN THE CITY</center></h3>";demo1.innerHTML = text;}
+else if(f==1 && d[0]>=2){f=0;continue;}
+ if(f==2 && d[1]<2){
+  repImage = "<img  class='img2' src='2.png'width=300 height=300>";demo.innerHTML = repImage;
+	 text="<h3><center>2<br>ELITE</center></h3>";demo1.innerHTML = text;}
+else if(f==2 && d[1]>=2){f=0;continue;}
+ if(f==3 && d[2]<2){
+  repImage = "<img  class='img2' src='3.png'width=300 height=300>";demo.innerHTML = repImage;
+	 text="<h3><center>3<br>STRANGER THINGS</center></h3>";demo1.innerHTML = text;}
+else if(f==3 && d[2]>=2){f=0;continue;}
+
+}
+}
+</script>
+</body>
+</html>
